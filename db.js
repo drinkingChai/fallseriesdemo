@@ -1,8 +1,8 @@
 const Airtable = require('airtable');
-const base = new Airtable({apiKey: 'key6qRBeIDctbUuyx'}).base('appYPHKTjfMTWAEld');
+const base = new Airtable({apiKey: 'key6qRBeIDctbUuyx'}).base('appg4IOu4UylFRYq7');
 
 function getPageCb(num, cb) {
-  base('SiteData').select({
+  base('CurriData').select({
     view: "Grid view"
   }).eachPage(function page(records, fetchNextPage) {
     records.forEach(function(record, id) {
@@ -19,7 +19,7 @@ function getPageCb(num, cb) {
 }
 
 function numPagesCb(cb) {
-  base('SiteData').select({
+  base('CurriData').select({
     view: "Grid view"
   }).eachPage(function page(records, fetchNextPage) {
     cb(null, records.length);

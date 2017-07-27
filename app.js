@@ -13,13 +13,11 @@ app.get('/', function(req, res) {
   res.render('index');
 })
 
-// app.get('/steps/:num', function(req, res) {
-//   res.render('steps', { num: req.params.num, numPages: db.numPages(), content: db.getPage(req.params.num) });
-// })
-
 app.get('/steps/:num', function(req, res) {
   db.getPageCb(req.params.num*1, function(err, pageContent) {
+    if (err) return console.log(err);
     db.numPagesCb(function(err, numPages) {
+      if (err) return console.log(err);
       res.render('steps', { num: req.params.num, numPages: numPages, content: pageContent });
     })
   })
