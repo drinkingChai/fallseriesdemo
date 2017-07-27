@@ -9,7 +9,7 @@ function getPageCb(num, cb) {
       if (id == num) cb(null, {
         header: record.get('header'),
         imageUrl: record.get('imageUrl'),
-        brief: record.get('brief'),
+        brief: record.get('brief') == undefined ? '' : record.get('brief').trim().split('- ').slice(1),
         full: record.get('full')
       })
     });

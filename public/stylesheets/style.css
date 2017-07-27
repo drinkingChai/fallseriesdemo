@@ -12,7 +12,7 @@ body {
 h1 { font-size: 3em }
 h2 { font-size: 2.3em; }
 h3 { font-size: 1.8em; line-height: 1.1em }
-h4 { font-size: 1.4em }
+h4 { font-size: 1.2em }
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -20,6 +20,12 @@ h1 {
 
 h2, h3 {
   font-weight: bold;
+}
+
+.step ul {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 1em;
 }
 
 .content,

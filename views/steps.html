@@ -8,7 +8,11 @@
   <h3>{{ content.header }}</h3>
   <img src="{{content.imageUrl}}" alt="">
   <h3>Why do we do this?</h3>
-  <h4>{{ content.brief }}</h4>
+  <ul>
+    {% for step in content.brief %}
+      <li>{{ step }}</li>
+    {% endfor %}
+  </ul>
 
   <a class="fs-btn-rounded" href="#">Details <i class="fa fa-angle-down" aria-hidden="true"></i></a>
   <p>{{ content.full }}</p>
