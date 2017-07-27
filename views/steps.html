@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  Step {{ num }}
+
+  {{ content.header }}
+  <img src="{{content.imageUrl}}" alt="">
+  {{ content.brief }}
+
+  <a href="#">Details</a>
+  <p>{{ content.full }}</p>
+
+  <a {%if ((num*1) - 1 ) < 0 %} href="/steps/0" {% else %} href="/steps/{{ ((num*1) - 1 ) }}" {% endif %}>Prev</a>
+  <a {%if ((num*1) + 1 ) >= numPages %} href="/steps/{{ numPages - 1 }}" {% else %} href="/steps/{{ ((num*1) + 1 ) }}" {% endif %}>Next</a>
+
+{% endblock %}
