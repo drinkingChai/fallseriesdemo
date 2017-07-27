@@ -65,6 +65,15 @@ nav li {
   padding-left: 1em;
   padding-right: 1em;
 }
+.fs-btn-underlined {
+  border: 0;
+  border-radius: 0;
+  padding-bottom: 2px;
+  border-bottom: solid 2px #000;
+}
+.fs-btn-squared {
+  border-radius: 0;
+}
 
 .step {
   display: flex;
@@ -93,4 +102,19 @@ a:visited, a:focus {
 .step *,
 .content * {
   margin: 10px;
+}
+
+
+@media screen and (max-width: 699px) {
+  .content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .content {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
 }
