@@ -1,16 +1,22 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-  Step {{ num }}
 
-  {{ content.header }}
+<div class="step">
+  <!-- <h2>Step {{ num*1 + 1 }}!</h2> -->
+
+  <h3>{{ content.header }}</h3>
   <img src="{{content.imageUrl}}" alt="">
-  {{ content.brief }}
+  <h3>Why do we do this?</h3>
+  <h4>{{ content.brief }}</h4>
 
-  <a href="#">Details</a>
+  <a class="fs-btn-rounded" href="#">Details <i class="fa fa-angle-down" aria-hidden="true"></i></a>
   <p>{{ content.full }}</p>
+</div>
 
-  <a {%if ((num*1) - 1 ) < 0 %} href="/steps/0" {% else %} href="/steps/{{ ((num*1) - 1 ) }}" {% endif %}>Prev</a>
-  <a {%if ((num*1) + 1 ) >= numPages %} href="/steps/{{ numPages - 1 }}" {% else %} href="/steps/{{ ((num*1) + 1 ) }}" {% endif %}>Next</a>
+<div class="page-nav">
+  <a class="fs-btn-default left" {%if ((num*1) - 1 ) < 0 %} href="/steps/0" {% else %} href="/steps/{{ ((num*1) - 1 ) }}" {% endif %}>Prev</a>
+  <a class="fs-btn-default right" {%if ((num*1) + 1 ) >= numPages %} href="/steps/{{ numPages - 1 }}" {% else %} href="/steps/{{ ((num*1) + 1 ) }}" {% endif %}>Next</a>
+</div>
 
 {% endblock %}

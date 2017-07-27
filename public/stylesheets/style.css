@@ -1,13 +1,87 @@
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
 html { font-size: 16px }
 body {
   font-size: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1 { font-size: 3em }
 h2 { font-size: 2.5em }
 h3 { font-size: 2em }
-h4 { font-size: 1.6em }
+h4 { font-size: 1.5em }
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.content,
+header {
+  padding: 10%;
+}
+
+header {
+  padding-bottom: 0;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 10px;
+}
 
 .content {
-  
+  padding-top: 5%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  display: inline-block;
+}
+
+.fs-btn-default,
+.fs-btn-rounded {
+  padding: 10px;
+  border: solid 1px #000;
+  border-radius: 5px;
+  margin: 2px;
+}
+.fs-btn-rounded {
+  border-radius: 5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a, a:hover,
+a:visited, a:focus {
+  text-decoration: none;
+}
+
+img {
+  max-width: 50%;
+  min-width: 50%;
+  min-height: 50%;
+  max-height: 50%;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step *,
+.content * {
+  margin: 10px;
 }

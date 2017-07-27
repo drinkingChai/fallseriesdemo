@@ -1,13 +1,13 @@
 const pages = [
   {
-    header: "So you wanna be an A-Rider!? Find out what it's all about!",
-    imageUrl: "http://gph.is/2clJI45"
-  },
-  {
-    header: "Don't stop pedaling! No coasting",
-    imageUrl: "http://fiab-leccociclabile.it/site/wp-content/uploads/2016/03/pedaloso2.gif",
+    header: "Don't stop pedaling! Low/minimal coasting",
+    imageUrl: "http://img.res.meizu.com/img/download/uc/12/30/29/02/80/123029028/w300h300?t=1496478585",
     brief: "By doing so, you'll always be in the right gear! This reduces jerkyness in the paceline.",
     full: ""
+  },
+  {
+    header: "Stuff!",
+    imageUrl: "https://media.giphy.com/media/L9R8xjbzehcre/giphy.gif"
   }
 ]
 
