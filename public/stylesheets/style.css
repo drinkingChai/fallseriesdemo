@@ -63,17 +63,17 @@ nav li {
   justify-content: center;
   flex-direction: column;
 }
+.step h2, h3 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
 
 a, a:hover,
 a:visited, a:focus {
   text-decoration: none;
-}
-
-img {
-  max-width: 50%;
-  min-width: 50%;
-  min-height: 50%;
-  max-height: 50%;
 }
 
 .page-nav {
