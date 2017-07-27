@@ -13,8 +13,16 @@ app.get('/', function(req, res) {
   res.render('index');
 })
 
+// app.get('/steps/:num', function(req, res) {
+//   res.render('steps', { num: req.params.num, numPages: db.numPages(), content: db.getPage(req.params.num) });
+// })
+
 app.get('/steps/:num', function(req, res) {
-  res.render('steps', { num: req.params.num, numPages: db.numPages(), content: db.getPage(req.params.num) });
+  db.getPageCb(req.params.num*1, function(err, pageContent) {
+    db.numPagesCb(function(err, numPages) {
+      res.render('steps', { num: req.params.num, numPages: numPages, content: pageContent });
+    })
+  })
 })
 
 
