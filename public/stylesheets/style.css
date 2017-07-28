@@ -34,8 +34,11 @@ header {
   padding-bottom: 0;
   text-align: center;
 }
-header h1 {
+header .site-title {
   margin-bottom: 30px;
+}
+header .site-title h1 {
+  margin-bottom: 7px;
 }
 
 .content {
