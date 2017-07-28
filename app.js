@@ -28,8 +28,10 @@ app.get('/faq', function(req, res) {
   res.render('faq');
 })
 
-app.get('/schedule', function(req, res) {
-  res.render('schedule');
+app.get('/rides', function(req, res) {
+  db.getRidesCb(function(err, rides) {
+    res.render('rides', { rides });
+  })
 })
 
 

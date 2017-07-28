@@ -28,8 +28,24 @@ function numPagesCb(cb) {
   });
 }
 
+function getRidesCb(cb) {
+  base('Rides').select({
+    view: "Grid view"
+  }).eachPage(function page(records, fetchNextPage) {
+    cb(null, records.map(function(record) {
+      var fields = record.fields,
+        date = fields.date.split('-');
+      fields.date = `${date[1]}/${date[2]}/${date[0]}`;
+      return record.fields;
+    }));
+  }, function done(err) {
+    if (err) { return cb(err) }
+  });
+}
+
 
 module.exports = {
   getPageCb,
-  numPagesCb
+  numPagesCb,
+  getRidesCb
 }

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+  <div class="rides">
+    <ul>
+      {% for ride in rides %}
+      <li>
+        <div class="left">
+          {{ ride.date }} <br>
+          <span class="ride-title">{{ ride.title }}</span>
+        </div>
+        <div class="right">
+          <!-- Add jQuery magic here! -->
+          <a class="" href="#"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endblock %}
