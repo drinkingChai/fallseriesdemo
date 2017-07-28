@@ -16,6 +16,7 @@ h4 { font-size: 1.2em }
 
 h1 {
   font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 
 h2, h3 {
@@ -56,9 +57,10 @@ nav li {
 .fs-btn-default,
 .fs-btn-rounded {
   padding: 10px;
-  border: solid 1px #000;
+  border: solid .15em #7FDBFF;
   border-radius: 5px;
   margin: 2px;
+  font-weight: bold;
 }
 .fs-btn-rounded {
   border-radius: 5em;
@@ -74,6 +76,10 @@ nav li {
 .fs-btn-squared {
   border-radius: 0;
 }
+.fs-btn-filled {
+  border-color: #7FDBFF;
+  background-color: #7FDBFF;
+}
 
 .step {
   display: flex;
@@ -84,14 +90,14 @@ nav li {
 .step h2, h3 {
   text-align: center;
 }
-
-img {
+.step img {
   max-width: 100%;
 }
 
 a, a:hover,
 a:visited, a:focus {
   text-decoration: none;
+  color: inherit;
 }
 
 .page-nav {
@@ -103,6 +109,13 @@ a:visited, a:focus {
 .content * {
   margin: 10px;
 }
+
+
+footer {
+  height: 300px;
+  background-color: #001f3f;
+}
+
 
 
 @media screen and (max-width: 699px) {

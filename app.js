@@ -9,6 +9,7 @@ nunjucks.configure('views', { express: app, noCache: true });
 
 app.use(express.static('public'));
 
+
 app.get('/', function(req, res) {
   res.render('index');
 })
@@ -23,8 +24,13 @@ app.get('/steps/:num', function(req, res) {
   })
 })
 
+app.get('/faq', function(req, res) {
+  res.render('faq');
+})
 
-
+app.get('/schedule', function(req, res) {
+  res.render('schedule');
+})
 
 
 
