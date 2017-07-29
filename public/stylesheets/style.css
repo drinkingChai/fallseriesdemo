@@ -128,6 +128,10 @@ a:visited, a:focus {
   display: flex;
   justify-content: space-between;
 }
+.rides li .right {
+  text-align: right;
+  line-height: 1.5em;
+}
 .ride-title {
   display: inline-block;
   font-weight: bold;
@@ -142,11 +146,21 @@ footer {
 }
 
 
-
 @media screen and (max-width: 699px) {
   .content {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .rides li .right,
+  .rides li.left {
+    margin: 0;
+  }
+  .rides li .right a {
+    display: block;
+    line-height: 1em;
   }
 }
 
