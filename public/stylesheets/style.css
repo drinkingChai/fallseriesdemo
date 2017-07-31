@@ -26,17 +26,17 @@ h1, h2, h3 {
 a, a:hover,
 a:visited, a:focus {
   text-decoration: none;
-  /*color: inherit;*/
 }
 
 .content,
 header {
-  padding: 10%;
+  padding: 3%;
 }
 
 header {
-  padding-bottom: 0;
   text-align: center;
+  background-color: #85144b;
+  color: #fff;
 }
 header .site-title {
   margin-bottom: 30px;
@@ -46,7 +46,7 @@ header .site-title h1 {
 }
 
 .content {
-  padding-top: 5%;
+  padding-top: 1%;
   max-width: 900px;
   box-sizing: border-box;
   margin-left: auto;
@@ -61,10 +61,9 @@ nav li {
   display: inline-block;
 }
 
-.fs-btn-default,
-.fs-btn-rounded {
+.fs-btn-default {
   padding: 10px;
-  border: solid .15em #001f3f;
+  border: solid 0.1em #111111;
   border-radius: 3px;
   margin: 2px;
   font-weight: bold;
@@ -79,16 +78,20 @@ nav li {
   border: 0;
   border-radius: 0;
   padding-bottom: 2px;
-  border-bottom: solid 2px #000;
+  border-bottom: solid 0.1em #000;
   color: #000;
 }
 .fs-btn-squared {
   border-radius: 0;
 }
 .fs-btn-filled {
-  border-color: #0074D9;
-  background-color: #0074D9;
+  border-color: #111111;
+  background-color: #111111;
   color: #fff;
+}
+.fs-btn-inverse {
+  color: #fff;
+  border-color: #fff;
 }
 .fs-icon {
   color: #000;
@@ -171,7 +174,7 @@ nav li {
 
 footer {
   min-height: 200px;
-  background-color: #001f3f;
+  background-color: #111111;
 }
 
 
@@ -183,6 +186,9 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
+  header {
+    padding: 4%;
+  }
   .rides li .right,
   .rides li.left {
     margin: 0;
