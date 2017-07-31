@@ -7,6 +7,10 @@ html { font-size: 16px }
 body {
   font-size: 100%;
   font-family: 'Lato', sans-serif;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
 }
 
 h1 { font-size: 3em }
@@ -19,10 +23,10 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-.step ul {
-  list-style-type: circle;
-  list-style-position: outside;
-  margin-left: 1em;
+a, a:hover,
+a:visited, a:focus {
+  text-decoration: none;
+  /*color: inherit;*/
 }
 
 .content,
@@ -43,6 +47,10 @@ header .site-title h1 {
 
 .content {
   padding-top: 5%;
+  max-width: 900px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 nav {
@@ -57,9 +65,10 @@ nav li {
 .fs-btn-rounded {
   padding: 10px;
   border: solid .15em #001f3f;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 2px;
   font-weight: bold;
+  color: #000;
 }
 .fs-btn-rounded {
   border-radius: 5em;
@@ -71,14 +80,26 @@ nav li {
   border-radius: 0;
   padding-bottom: 2px;
   border-bottom: solid 2px #000;
+  color: #000;
 }
 .fs-btn-squared {
   border-radius: 0;
 }
 .fs-btn-filled {
-  border-color: #7FDBFF;
-  background-color: #7FDBFF;
+  border-color: #0074D9;
+  background-color: #0074D9;
+  color: #fff;
 }
+.fs-icon {
+  color: #000;
+}
+.rides .fs-icon {
+  margin: 0;
+}
+.rides .fs-icon i {
+  font-size: 1em;
+}
+
 
 .step {
   display: flex;
@@ -92,16 +113,26 @@ nav li {
 .step img {
   max-width: 100%;
 }
-
-a, a:hover,
-a:visited, a:focus {
-  text-decoration: none;
-  color: inherit;
+.step ul {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 1em;
+  margin: 0;
 }
 
 .page-nav {
   display: flex;
   justify-content: space-between;
+}
+.page-nums {
+  display: flex;
+  justify-content: center;
+}
+.page-nums a {
+  margin-right: 1px;
+}
+.page-nums a:first-child {
+  margin-left: 0;
 }
 
 .step *,
@@ -110,15 +141,25 @@ a:visited, a:focus {
 }
 
 .rides {
-  background-color: #DDDDDD;
-  padding: 2%;
+  /*background-color: #DDDDDD;*/
+  margin: 0;
 }
 .rides ul {
   list-style-type: none;
+  margin: 0;
 }
 .rides li {
+  padding: 4%;
+  margin: 0;
   display: flex;
   justify-content: space-between;
+  background-color: #DDDDDD;
+  border-bottom: solid 1px hsl(0, 0%, 75%);
+  margin-bottom: 10px;
+}
+.rides li .right {
+  text-align: right;
+  line-height: 1.5em;
 }
 .ride-title {
   display: inline-block;
@@ -134,11 +175,21 @@ footer {
 }
 
 
-
 @media screen and (max-width: 699px) {
   .content {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .rides li .right,
+  .rides li.left {
+    margin: 0;
+  }
+  .rides li .right a {
+    display: block;
+    line-height: 1em;
   }
 }
 
