@@ -19,6 +19,7 @@ app.get('/steps/:num', function(req, res) {
     if (err) return console.log(err);
     db.numPagesCb(function(err, numPages) {
       if (err) return console.log(err);
+      numPages = numPages.map(function(item, i) { return i });
       res.render('steps', { num: req.params.num, numPages: numPages, content: pageContent });
     })
   })

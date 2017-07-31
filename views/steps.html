@@ -8,19 +8,35 @@
   <h3>{{ content.header }}</h3>
   <img src="{{content.imageUrl}}" alt="">
   <!-- <h3>Why do we do this?</h3> -->
-  <ul>
-    {% for step in content.brief %}
-      <li>{{ step }}</li>
-    {% endfor %}
-  </ul>
+  <div class="brief">
+    <ul>
+      {% for step in content.brief %}
+        <li>{{ step }}</li>
+      {% endfor %}
+    </ul>
+  </div>
 
   <!-- <a class="fs-btn-rounded fs-btn-underlined" href="#">Details <i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
-  <p>{{ content.full }}</p>
+  <div class="full">
+    {% for i in content.full %}
+      {% if i.type == 'para' %}
+        <p>{{ i.text }}</p>
+      {% else %}
+        <ul><li>{{ i.text }}</li></ul>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 <div class="page-nav">
   <a class="fs-btn-default left" {%if ((num*1) - 1 ) < 0 %} href="/steps/0" {% else %} href="/steps/{{ ((num*1) - 1 ) }}" {% endif %}>Prev</a>
-  <a class="fs-btn-default right" {%if ((num*1) + 1 ) >= numPages %} href="/steps/{{ numPages - 1 }}" {% else %} href="/steps/{{ ((num*1) + 1 ) }}" {% endif %}>Next</a>
+  {% if content.full != '' %}<a class="fs-btn-default fs-btn-underlined details" href="#">Details</a>{% endif %}
+  <a class="fs-btn-default right" {%if ((num*1) + 1 ) >= numPages.length %} href="/steps/{{ numPages.length - 1 }}" {% else %} href="/steps/{{ ((num*1) + 1 ) }}" {% endif %}>Next</a>
 </div>
 
+<div class="page-nums">
+  {% for i in numPages %}
+    <a class="fs-btn-default" href="/steps/{{ i }}">{{ i + 1 }}</a>
+  {% endfor %}
+</div>
 {% endblock %}
