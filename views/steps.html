@@ -4,11 +4,10 @@
 
 <div class="step">
 
-  <div class="title">
+  <div class="step-title">
     <h3>{{ content.header }}</h3>
   </div>
 
-  
   <img src="{{content.imageUrl}}" alt="">
   <div class="brief">
     <ul>
@@ -18,6 +17,9 @@
     </ul>
   </div>
 
+  <div class="det-title">
+    <h3>The deets!</h3>
+  </div>
   <div class="full">
     {% for i in content.full %}
       {% if i.type == 'para' %}
@@ -31,7 +33,7 @@
 
 <div class="page-nav">
   <a class="fs-btn-default left" {%if ((num*1) - 1 ) < 0 %} href="/steps/0" {% else %} href="/steps/{{ ((num*1) - 1 ) }}" {% endif %}>Prev</a>
-  {% if content.full != '' %}<a class="fs-btn-default fs-btn-underlined details" href="#">Details</a>{% endif %}
+  {% if content.full != '' %}<span class="fs-btn-default fs-btn-underlined details" href="">Details</span>{% endif %}
   <a class="fs-btn-default right" {%if ((num*1) + 1 ) >= numPages.length %} href="/steps/{{ numPages.length - 1 }}" {% else %} href="/steps/{{ ((num*1) + 1 ) }}" {% endif %}>Next</a>
 </div>
 
