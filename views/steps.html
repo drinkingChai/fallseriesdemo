@@ -3,11 +3,13 @@
 {% block content %}
 
 <div class="step">
-  <!-- <h2>Step {{ num*1 + 1 }}!</h2> -->
 
-  <h3>{{ content.header }}</h3>
+  <div class="title">
+    <h3>{{ content.header }}</h3>
+  </div>
+
+  
   <img src="{{content.imageUrl}}" alt="">
-  <!-- <h3>Why do we do this?</h3> -->
   <div class="brief">
     <ul>
       {% for step in content.brief %}
@@ -16,7 +18,6 @@
     </ul>
   </div>
 
-  <!-- <a class="fs-btn-rounded fs-btn-underlined" href="#">Details <i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
   <div class="full">
     {% for i in content.full %}
       {% if i.type == 'para' %}

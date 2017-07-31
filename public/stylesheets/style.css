@@ -35,8 +35,9 @@ header {
 
 header {
   text-align: center;
-  background-color: #85144b;
-  color: #fff;
+  background-color: #39CCCC;
+  color: #0074D9;
+  color: #0062B8;
 }
 header .site-title {
   margin-bottom: 30px;
@@ -46,7 +47,7 @@ header .site-title h1 {
 }
 
 .content {
-  padding-top: 1%;
+  padding-top: 2%;
   max-width: 900px;
   box-sizing: border-box;
   margin-left: auto;
@@ -56,15 +57,20 @@ header .site-title h1 {
 nav {
   display: flex;
   justify-content: center;
+  background-color: #7FDBFF;
 }
 nav li {
   display: inline-block;
 }
+nav a.fs-btn-default {
+  color: #0074D9;
+  border: 0;
+}
 
 .fs-btn-default {
   padding: 10px;
-  border: solid 0.1em #111111;
-  border-radius: 3px;
+  border: solid 1px #111111;
+  /*border-radius: 3px;*/
   margin: 2px;
   font-weight: bold;
   color: #000;
@@ -78,7 +84,7 @@ nav li {
   border: 0;
   border-radius: 0;
   padding-bottom: 2px;
-  border-bottom: solid 0.1em #000;
+  border-bottom: solid 1px #000;
   color: #000;
 }
 .fs-btn-squared {
@@ -122,6 +128,12 @@ nav li {
   margin-left: 1em;
   margin: 0;
 }
+.step .title {
+  background-color: #01FFAC;
+  color: #307858;
+  width: 100%;
+  padding: 1%;
+}
 
 .page-nav {
   display: flex;
@@ -130,6 +142,8 @@ nav li {
 .page-nums {
   display: flex;
   justify-content: center;
+  border-top: solid 1px #AAAAAA;
+  padding-top: 1%;
 }
 .page-nums a {
   margin-right: 1px;
@@ -144,7 +158,6 @@ nav li {
 }
 
 .rides {
-  /*background-color: #DDDDDD;*/
   margin: 0;
 }
 .rides ul {
@@ -156,7 +169,7 @@ nav li {
   margin: 0;
   display: flex;
   justify-content: space-between;
-  background-color: #DDDDDD;
+  background-color: #FF7DCA;
   border-bottom: solid 1px hsl(0, 0%, 75%);
   margin-bottom: 10px;
 }
@@ -174,7 +187,7 @@ nav li {
 
 footer {
   min-height: 200px;
-  background-color: #111111;
+  background-color: #001f3f;
 }
 
 
@@ -186,6 +199,9 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
+  .content {
+    padding-top: 3%;
+  }
   header {
     padding: 4%;
   }
